@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./bg-header-desktop.png");
+    background-repeat: no-repeat;
+    font-family: "Heebo", sans-serif;
+    overflow-x: hidden;
+}
+
+.header-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: clamp(30px, 4vw, 50px);
+    padding: clamp(30px, 5vw, 70px);
+}
+
+.hero-logo img {
+    height: 80px;
+    margin-bottom: clamp(10px, 2vw, 40px);
+}
+
+.header-section h1 {
+    font-size: clamp(24px, 4vw, 40px);
+    margin-bottom: clamp(10px, 2vw, 20px);
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-section h5 {
+    font-size: clamp(12px, 1.5vw, 15px);
+    color: #DDDDDD;
+    text-align: center;
+    max-width: 500px;
+    /* Fixed max-width to avoid clamp calculation bugs */
+    margin-bottom: clamp(20px, 3vw, 40px);
+}
+
+.btn-header {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-header .btn1,
+.btn-header .btn2 {
+    font-family: inherit;
+    /* Automatically inherits "Heebo" from body */
+    font-size: clamp(14px, 2vw, 18px);
+    padding: 14px 28px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.btn-header .btn1 {
+    background-color: green;
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.4);
+}
+
+.btn-header .btn2 {
+    background-color: blue;
+    box-shadow: 0 4px 15px rgba(100, 37, 248, 0.4);
+}
+
+@media (max-width: 768px) {
+    .btn-header {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.section-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: clamp(30px, 2vw, 50px);
+    padding: 0 20px;
+}
+
+.section-main h3 {
+    font-size: clamp(24px, 4vw, 30px);
+    margin-bottom: clamp(10px, 2vw, 20px);
+    font-weight: normal;
+    text-align: center;
+}
+
+.section-main h5 {
+    font-size: clamp(14px, 1.5vw, 15px);
+    color: #DDDDDD;
+    text-align: center;
+    max-width: 575px;
+    margin-bottom: clamp(20px, 3vw, 40px);
+}
+
+/* Media query for tablets and mobile devices (768px and below) */
+@media (max-width: 768px) {
+    .section-main {
+        margin-top: 30px;
+        padding: 0 16px;
+    }
+
+    .section-main h3 {
+        font-size: clamp(20px, 5vw, 26px);
+        max-width: 500px;
+
+        line-height: 1.5;
+
+    }
+}
+
+.section-main2 {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    /* Space between the computer and the text */
+    padding: 40px 0;
+    width: 100%;
+}
+
+
+.computer {
+    flex-shrink: 0;
+}
+
+.computer img {
+
+    margin-left: -150px;
+
+
+
+    width: 800px;
+    max-width: none;
+    display: block;
+}
+
+/* 4. Text list styling on the right */
+.content-side {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding-right: 20px;
+    margin-top: -150px;
+}
+
+.feature-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #777;
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .section-main2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding: 30px 20px;
+        width: 100%;
+
+    }
+
+    .computer img {
+        margin-left: 0;
+        width: 100%;
+        max-width: 380px;
+        height: auto;
+        display: block;
+    }
+
+    .content-side {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-right: 0;
+        text-align: center;
+        margin-top: 0;
+    }
+}
+
+.main-section3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 16px;
+    margin-top: 70px;
+}
+
+.main-section3 h3 {
+    font-size: clamp(24px, 4vw, 30px);
+    margin-bottom: clamp(10px, 2vw, 20px);
+    font-weight: normal;
+    text-align: center;
+}
+
+.main-section3 h5 {
+    font-size: clamp(14px, 1.5vw, 15px);
+    color: #DDDDDD;
+    text-align: center;
+    max-width: 575px;
+    margin-bottom: clamp(20px, 3vw, 40px);
+    line-height: 1.5;
+}
+
+.device {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.device img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+}
+
+/* Media Query for Mobile / Tablets */
+@media (max-width: 768px) {
+    .main-section3 {
+        margin-top: 40px;
+        padding: 0 20px;
+        width: 100%;
+
+    }
+
+    .device img {
+        width: 100%;
+        max-width: 475px;
+        height: auto;
+    }
+}
+
+.main-section5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 16px;
+    align-items: center;
+}
+
+.main-section5 h3 {
+    font-size: clamp(24px, 4vw, 30px);
+    margin-bottom: clamp(10px, 2vw, 20px);
+    font-weight: normal;
+    text-align: center;
+}
+
+.main-section5 h5 {
+    font-size: clamp(14px, 1.5vw, 15px);
+    color: #DDDDDD;
+    text-align: center;
+    max-width: 575px;
+    margin-bottom: clamp(20px, 3vw, 40px);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .main-section5 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 16px;
+        width: 100%;
+    }
+}
+
+.main-section6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+    gap: 20px;
+}
+
+.section6-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fixed nested selector for plain CSS */
+.section6-article img {
+    width: 100%;
+    max-width: 60px;
+    /* Increased slightly from 30px; adjust if you need them bigger */
+    height: auto;
+}
+
+.main-section6 h3 {
+    font-size: clamp(24px, 4vw, 30px);
+    margin-bottom: clamp(10px, 2vw, 20px);
+    font-weight: normal;
+    text-align: center;
+}
+
+.main-section6 h5 {
+    font-size: clamp(14px, 1.5vw, 15px);
+    color: #DDDDDD;
+    text-align: center;
+    max-width: 325px;
+    margin-bottom: clamp(20px, 3vw, 40px);
+    line-height: 1.5;
+}
+
+/* Media Query for Mobile (768px and below) */
+@media (max-width: 768px) {
+    .main-section6 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .section6-article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .section6-article img {
+        width: 100%;
+        max-width: 50px;
+        height: auto;
+    }
+
+    .main-section6 h3 {
+        font-size: clamp(20px, 4vw, 24px);
+        margin-bottom: 10px;
+    }
+
+    .main-section6 h5 {
+        font-size: 14px;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+.main-section7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 50px;
+    gap: 120px;
+}
+
+.main-section7 img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    display: block;
+
+}
+
+/* Media Query for Mobile (768px and below) */
+@media (max-width: 768px) {
+    .main-section7 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 20px;
+        gap: 50px;
+    }
+
+    .main-section7 img {
+        width: 100%;
+        max-width: 70px;
+        height: auto;
+    }
+}
+
+.main-section8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: clamp(30px, 4vw, 50px);
+    padding: clamp(30px, 5vw, 70px);
+
+}
+
+.main-section8 h1 {
+    font-size: clamp(20px, 4vw, 25px);
+    margin-bottom: clamp(10px, 2vw, 20px);
+    font-weight: bold;
+    text-align: center;
+    color: grey;
+}
+
+.main-section8 h5 {
+    font-size: clamp(12px, 1.5vw, 15px);
+    color: #DDDDDD;
+    text-align: center;
+    max-width: 500px;
+    /* Fixed max-width to avoid clamp calculation bugs */
+    margin-bottom: clamp(20px, 3vw, 40px);
+}
+
+.btn-section8 {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-section8 .btn3,
+.btn-section8 .btn4 {
+    font-family: inherit;
+    /* Automatically inherits "Heebo" from body */
+    font-size: clamp(14px, 2vw, 18px);
+    padding: 14px 28px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.btn-section8 .btn3 {
+    background-color: green;
+    box-shadow: 0 4px 15px rgba(0, 128, 0, 0.4);
+}
+
+.btn-section8 .btn4 {
+    background-color: blue;
+    box-shadow: 0 4px 15px rgba(100, 37, 248, 0.4);
+}
+
+@media (max-width: 768px) {
+    .btn-section8 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.main-section8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: clamp(30px, 2vw, 50px);
+    padding: 0 20px;
+}
+
+.main-section8 h3 {
+    font-size: clamp(24px, 4vw, 30px);
+    margin-bottom: clamp(10px, 2vw, 20px);
+    font-weight: normal;
+    text-align: center;
+}
+
+.main-section8 h5 {
+    font-size: clamp(14px, 1.5vw, 15px);
+    color: #DDDDDD;
+    text-align: center;
+    max-width: 575px;
+    margin-bottom: clamp(20px, 3vw, 40px);
+}
+
+footer {
+    background-color: #DDDDDD;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 50px 50px;
+    margin-top: 120px;
+    gap: 50px;
+}
+
+footer article {
+    display: flex;
+    gap: 40px;
+
+    align-items: center;
+}
+
+.hero-footer img {
+    width: 100%;
+    height: auto;
+    max-width: 40px;
+    display: block;
+
+}
+
+.footer-text {
+    color: grey;
+}
+
+.footer-image {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-image img {
+    width: 100%;
+    height: auto;
+    max-width: 20px;
+    display: block;
+}
+
+/* Media Query for Mobile and Tablets (768px and below) */
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+        margin-top: 60px;
+        gap: 30px;
+        text-align: center;
+    }
+
+    footer article {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .footer-image {
+        justify-content: center;
+    }
+}
